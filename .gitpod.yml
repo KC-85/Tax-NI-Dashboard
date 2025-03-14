@@ -4,4 +4,4 @@ tasks:
       source venv/bin/activate
       pip install -r requirements.txt
   - command: |
-      while sleep 600; do echo "Extending Gitpod Timeout..."; done
+      python manage.py runserver 0.0.0.0:8000
