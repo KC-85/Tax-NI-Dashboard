@@ -1,0 +1,31 @@
+{% extends 'dashboard/base.html' %}
+
+{% block title %}Add Expense{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2 class="text-center mt-4">Add Expense</h2>
+
+    <div class="card mt-4">
+        <div class="card-body">
+            <form method="post">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label for="id_description" class="form-label">Description:</label>
+                    {{ form.description }}
+                </div>
+                <div class="mb-3">
+                    <label for="id_date" class="form-label">Date:</label>
+                    {{ form.date }}
+                </div>
+                <div class="mb-3">
+                    <label for="id_amount" class="form-label">Amount (£):</label>
+                    {{ form.amount }}
+                </div>
+                <button type="submit" class="btn btn-danger">Save</button>
+                <a href="{% url 'dashboard' %}" class="btn btn-secondary">Cancel</a>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
