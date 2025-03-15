@@ -1,0 +1,63 @@
+{% extends 'dashboard/base.html' %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2 class="text-center mt-4">Tax & NI Dashboard</h2>
+
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <div class="card bg-success text-white">
+                <div class="card-body">
+                    <h4>Total Income</h4>
+                    <h2>£{{ total_income|floatformat:2 }}</h2>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card bg-danger text-white">
+                <div class="card-body">
+                    <h4>Total Expenses</h4>
+                    <h2>£{{ total_expenses|floatformat:2 }}</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <div class="card bg-warning text-dark">
+                <div class="card-body">
+                    <h4>Estimated Tax (20%)</h4>
+                    <h2>£{{ estimated_tax|floatformat:2 }}</h2>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card bg-info text-white">
+                <div class="card-body">
+                    <h4>Estimated NI (9%)</h4>
+                    <h2>£{{ estimated_ni|floatformat:2 }}</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-12">
+            <div class="card bg-primary text-white">
+                <div class="card-body">
+                    <h4>Net Income</h4>
+                    <h2>£{{ net_income|floatformat:2 }}</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center mt-4">
+        <a href="{% url 'add_income' %}" class="btn btn-success">Add Income</a>
+        <a href="{% url 'add_expense' %}" class="btn btn-danger">Add Expense</a>
+    </div>
+</div>
+{% endblock %}
