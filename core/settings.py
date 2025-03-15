@@ -41,8 +41,8 @@ MIDDLEWARE = [
     'django.middleware.common.CommonMiddleware',
 ]
 
-ROOT_URLCONF = 'tax_ni_dashboard.urls'
-WSGI_APPLICATION = 'tax_ni_dashboard.wsgi.application'
+ROOT_URLCONF = 'core.urls'
+WSGI_APPLICATION = 'core.wsgi.application'
 
 # DATABASE CONFIGURATION
 DATABASES = {
@@ -100,7 +100,7 @@ LOGIN_TIMEOUT = 300  # Lockout for 5 minutes after 5 failed attempts
 
 # 4️⃣ **Cross-Site Request Forgery (CSRF) Protection**
 CSRF_COOKIE_HTTPONLY = True
-CSRF_FAILURE_VIEW = 'dashboard.views.csrf_failure'
+CSRF_FAILURE_VIEW = 'django.views.csrf.csrf_failure'
 
 # 5️⃣ **Clickjacking Protection**
 X_FRAME_OPTIONS = 'DENY'
