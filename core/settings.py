@@ -13,9 +13,17 @@ SECRET_KEY = os.getenv('SECRET_KEY', 'your-default-secret-key')
 DEBUG = True
 
 # ALLOWED HOSTS & CORS
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '.gitpod.io']
+ALLOWED_HOSTS = [
+    '127.0.0.1',
+    'localhost',
+    '.gitpod.io'
+]
 CORS_ALLOWED_ORIGINS = os.getenv('CORS_ALLOWED_ORIGINS', '').split(',')
-CSRF_TRUSTED_ORIGINS = os.getenv('CSRF_TRUSTED_ORIGINS', '').split(',')
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://8000-kc85-taxnidashboard-p3zz1phrpoi.ws-eu118.gitpod.io",
+    "https://*.gitpod.io"
+]
 
 # APPLICATIONS
 INSTALLED_APPS = [
