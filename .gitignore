@@ -4,3 +4,5 @@ __pycache__/
 db.sqlite3
 *.pyc
 *.pyo
+django_security.log
+migrations
