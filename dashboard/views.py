@@ -2,13 +2,14 @@ from django.shortcuts import render, redirect
 from .models import Income, Expense
 from .forms import IncomeForm, ExpenseForm
 from django.db.models import Sum
+from decimal import Decimal
 
 # Dashboard View - Summary of Income & Expenses
 def dashboard(request):
     total_income = Income.objects.aggregate(Sum('amount'))['amount__sum'] or 0
     total_expenses = Expense.objects.aggregate(Sum('amount'))['amount__sum'] or 0
-    estimated_tax = total_income * 0.20  # Assume 20% tax rate
-    estimated_ni = total_income * 0.09  # Assume 9% NI rate
+    estimated_tax = total_income * Decimal ("0.20")  # Assume 20% tax rate
+    estimated_ni = total_income *  Decimal ("0.09")  # Assume 9% NI rate
 
     context = {
         'total_income': total_income,
