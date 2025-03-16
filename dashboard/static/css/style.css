@@ -1,0 +1,90 @@
+/* 📌 Large Screens (Desktops, Laptops) */
+@media (max-width: 1200px) {
+    .container {
+      max-width: 85%;
+    }
+  }
+  
+  /* 📌 Medium Screens (Tablets, iPads) */
+  @media (max-width: 992px) {
+    .container {
+      max-width: 90%;
+    }
+  
+    .card {
+      font-size: 1.1rem;
+      padding: 15px;
+    }
+  
+    .navbar {
+      justify-content: space-around;
+    }
+  }
+  
+  /* 📌 Small Screens (Phones) */
+  @media (max-width: 768px) {
+    .container {
+      width: 95%;
+      padding: 15px;
+    }
+  
+    .card {
+      font-size: 1rem;
+      padding: 12px;
+    }
+  
+    .navbar {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .navbar a {
+      display: block;
+      width: 100%;
+      text-align: center;
+      padding: 10px;
+    }
+  
+    .button {
+      padding: 10px 15px;
+      font-size: 0.9rem;
+    }
+  }
+  
+  /* 📌 Extra Small Screens (Small Phones) */
+  @media (max-width: 576px) {
+    .card {
+      font-size: 0.9rem;
+      padding: 10px;
+    }
+  
+    .button {
+      padding: 8px 12px;
+      font-size: 0.85rem;
+    }
+  
+    .navbar a {
+      font-size: 14px;
+      padding: 8px;
+    }
+  }
+  
+  /* 📌 Ultra Small Screens (Very Small Devices) */
+  @media (max-width: 400px) {
+    .container {
+      width: 100%;
+      padding: 10px;
+    }
+  
+    .card {
+      font-size: 0.8rem;
+      padding: 8px;
+    }
+  
+    .button {
+      padding: 6px 10px;
+      font-size: 0.75rem;
+    }
+  }
+  
