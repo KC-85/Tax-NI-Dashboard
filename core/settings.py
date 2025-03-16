@@ -19,6 +19,8 @@ ALLOWED_HOSTS = [
     '.gitpod.io'
 ]
 CORS_ALLOWED_ORIGINS = os.getenv('CORS_ALLOWED_ORIGINS', '').split(',')
+# Ensure we remove empty values from the list to avoid errors
+CORS_ALLOWED_ORIGINS = [origin for origin in CORS_ALLOWED_ORIGINS if origin]
 
 CSRF_TRUSTED_ORIGINS = [
     "https://8000-kc85-taxnidashboard-p3zz1phrpoi.ws-eu118.gitpod.io",
