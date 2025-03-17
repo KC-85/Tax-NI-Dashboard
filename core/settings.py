@@ -8,6 +8,16 @@ dotenv.load_dotenv()
 # BASE DIRECTORY
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+import sentry_sdk
+from sentry_sdk.integrations.django import DjangoIntegration
+
+sentry_sdk.init(
+    dsn=os.getenv('SENTRY_DSN', ''),  # Load DSN from environment variables
+    integrations=[DjangoIntegration()],
+    traces_sample_rate=1.0,  # Adjust to 1.0 for full tracing, lower if needed
+    send_default_pii=True,  # Capture user data (IP, auth info)
+)
+
 # SECURITY SETTINGS
 SECRET_KEY = os.getenv('SECRET_KEY', 'your-default-secret-key')
 DEBUG = True
