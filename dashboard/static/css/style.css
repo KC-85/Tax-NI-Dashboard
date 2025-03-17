@@ -73,7 +73,7 @@
       font-size: 0.9rem;
     }
   }
-  
+
   /* 📌 Extra Small Screens (Small Phones) */
   @media (max-width: 576px) {
     .card {
@@ -109,4 +109,3 @@
       font-size: 0.75rem;
     }
   }
-  
