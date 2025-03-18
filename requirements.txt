@@ -6,7 +6,6 @@ django-cors-headers==4.7.0
 gunicorn==23.0.0
 packaging==24.2
 python-dotenv==1.0.1
-sentry-sdk==2.23.1
 sqlparse==0.5.3
 urllib3==2.3.0
 whitenoise==6.9.0
