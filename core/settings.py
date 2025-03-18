@@ -46,7 +46,7 @@ TEMPLATES = [
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
             os.path.join(BASE_DIR, "templates"),  # Global templates
-            os.path.join(BASE_DIR, "dashboard", "templates"),  # Dashboard app templates
+            os.path.join(BASE_DIR, "dashboard", "templates", "dashboard"),  # Dashboard app templates
         ],
 
         'APP_DIRS': True,
