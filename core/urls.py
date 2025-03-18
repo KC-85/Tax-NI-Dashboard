@@ -8,12 +8,12 @@ from dashboard import views
 urlpatterns = [
     path('admin/', admin.site.urls),  # Django Admin Panel
     path('', include('dashboard.urls')),  # Include dashboard app URLs
-
-    handler400 = "dashboard.views.error_400"
-    handler403 = "dashboard.views.error_403"
-    handler404 = "dashboard.views.error_404"
-    handler500 = "dashboard.views.error_500"
 ]
+
+handler400 = "dashboard.views.error_400"
+handler403 = "dashboard.views.error_403"
+handler404 = "dashboard.views.error_404"
+handler500 = "dashboard.views.error_500"
 
 # Serve static and media files during development
 if settings.DEBUG:
