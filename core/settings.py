@@ -20,7 +20,7 @@ sentry_sdk.init(
 
 # SECURITY SETTINGS
 SECRET_KEY = os.getenv('SECRET_KEY', 'your-default-secret-key')
-DEBUG = True
+DEBUG = False
 
 # ALLOWED HOSTS & CORS
 ALLOWED_HOSTS = [
