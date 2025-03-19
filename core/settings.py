@@ -109,10 +109,6 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
-STATICFILES_DIRS = [
-    BASE_DIR / 'static',  # Ensure this folder contains all static files
-]
-
 # 🔒 SECURITY MEASURES 🔒
 # 1️⃣ **Man-in-the-Middle (MITM) Protection**
 SECURE_SSL_REDIRECT = False
